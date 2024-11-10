@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Pseudoclases y pseudoelementos -->
+    <style>
+        p {
+            color: crimson;
+            font-size: large;
+        }
+        p::first-letter {
+            color: goldenrod;
+        }
+        p::before {
+            content: "🤠";
+        }
+        p::after {
+            content: "😥";
+        }
+        p:hover {
+            color: blue;
+        }
+
+        div p:nth-child(2) {
+            color: forestgreen;
+        }
+        ::placeholder {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>War</p>
+        <p>Thundear</p>
+        <p>Una basura</p>
+    </div>
+    <input type="text" placeholder="name">
+</body>
+</html>
