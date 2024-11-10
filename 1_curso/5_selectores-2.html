@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--     Selectores combinados -->
+    <style>
+        div p {
+            color: lime;
+        }
+        
+        div > div {
+            background: rebeccapurple;
+        }
+
+        .es {
+            background: red;
+        }
+
+        div + section {
+            background: peru;
+        }
+
+        div ~ p {
+            color: chocolate;
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <p>Colombia</p>
+            <div class="es">Es</div>
+        </div>
+    </div>
+    <div>
+        Master
+    </div>
+    <p>Clase de selectores</p>
+    <p>Clase de selectores</p>
+    <section>
+        Es lo mejor
+    </section>
+</body>
+</html>
