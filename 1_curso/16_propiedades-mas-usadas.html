@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: #7b1c01;
+        }
+        
+        .card {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container {
+            background-color: gray;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            width: 800px;
+            height: 400px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            overflow: hidden;
+            place-items: center
+            
+        }
+
+        .container .background-img:nth-child(1){
+            grid-column: 2/5;
+            grid-row: 1/4;
+            z-index: 1;
+        }
+
+        .container .logo:nth-child(3){
+            grid-column: 1/2;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+        }
+
+        .container .info:nth-child(4){
+            grid-column: 2/5;
+            grid-row: 2/4;
+            z-index: 4;
+        }
+
+        .container .background-img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .profile{
+            justify-content: center;
+            align-items: center;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            border-radius: 100%;
+            border: 1px inset black;
+            z-index: 3;
+        }
+
+        .info {
+            background-color: gray;
+            display: grid;
+        }
+    </style>
+</head>
+<!-- Este es un ejercicio aplicando todo lo visto para relaizar una card propia -->
+<body>
+    <section class="card">
+        <div class="container">
+            <img src="https://wallpapercave.com/wp/wp1914669.jpg" alt="background-img" class="background-img">
+            <img src="https://wiki.warthunder.com/images/3/36/Cardicon_dogfighting_pilot.png" alt="profile" class="profile">
+            <img src="https://media.printables.com/media/prints/852559/images/6557322_27c4a7b3-e480-40d4-9b62-10c9f5570d24_7d21314a-1720-45d8-ba5a-77c27f44d9fe/thumbs/inside/1280x960/png/wt1.webp" alt="logo" class="logo">
+            <div class="info"> 
+            </div> 
+        </div>
+    </section>
+</body>
+</html>
