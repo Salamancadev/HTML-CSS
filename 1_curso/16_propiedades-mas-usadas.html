@@ -5,82 +5,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        body{
             background-color: #7b1c01;
         }
         
-        .card {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-
-        }
         .container {
-            background-color: gray;
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: rgb(51, 49, 49);
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
             width: 800px;
-            height: 400px;
+            height: 600px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
             box-sizing: border-box;
-            border-radius: 10px;
             overflow: hidden;
-            place-items: center
+            border-radius: 10px;
+            place-items: center;
+        }
+
+        .overlay {
+            background-color: grey;
+            grid-row: 2 / 5;
+            grid-column: 2 / 5;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            border-left: 5px solid black;
+        }
+        .card .background-img {
+            grid-row: 1/5;
+            grid-column: 2/5;
+            width: 100%;
+            height: 100%;
+            filter: blur(1px);
+            border-left: 5px solid black;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
             
         }
-
-        .container .background-img:nth-child(1){
-            grid-column: 2/5;
-            grid-row: 1/4;
-            z-index: 1;
+        
+        .card .profile-img{
+            grid-row: 2/3;
+            grid-column: 3/4;
+            transform: translate(0%,-50%);
+            z-index: 2;
         }
 
-        .container .logo:nth-child(3){
+        .profile {
+            border-radius: 50%;
+            border: 1px inset black;
+        }
+
+        .card .logo-img {
+            grid-row: 4/5;
+            grid-column: 4/5;
+            transform: translate( 70%, 10%);
+            z-index: 1;
+        }
+    
+        .logo {
+            background-color: grey;
+            width: 30%;
+            height: 30%;
+        }
+        
+        .tank {
+            width: 100%;
+            height: 100%;
+            grid-row: 3/4;
+            grid-column: 2/3;
+            z-index: 1;
+            object-fit: contain
+        }       
+
+        .plane {
+            width: 100%;
+            height: 100%;
+            grid-row: 3/4;
+            grid-column: 3/4;
+            z-index: 1;
+            object-fit: contain
+        }
+
+        .fleet {
+            width: 100%;
+            height: 100%;
+            grid-row: 3/4;
+            grid-column: 4/5;
+            z-index: 1;
+            object-fit: contain
+        }
+
+        .card .name{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: xx-large;
+        color: white;
+        text-align: center;
+        }
+        
+        .name .Item:nth-child(2){
+            font-size: 70%;
+        }
+
+        .card .ground {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            align-self: end;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 2;
+        }
+
+        .card .air {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            align-self: end;
+            grid-column: 3/4;
+            grid-row: 2/3;
+            z-index: 2;
+        }
+
+        .air .SI:nth-child(1){
+            align-self: start;
+        }
+
+
+        .card .coast {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            align-self: end;
+            grid-column: 4/5;
+            grid-row: 2/3;
+            z-index: 2;
+        }
+
+        .card .infoG {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: white;
+            text-align: center;
+            align-self: start;  
+            grid-column: 2/3;
+            grid-row: 4/5;
+            z-index: 2;
+        }
+
+        .card .infoA {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: white;
+            text-align: center;
+            align-self: start;
+            grid-column: 3/4;
+            grid-row: 4/5;
+            z-index: 2;
+        }
+
+        .card .infoC {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: white;
+            text-align: center;
+            align-self: start;
+            grid-column: 4/5;
+            grid-row: 4/5;
+            z-index: 2;
+        }
+
+        .tittle{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+        }
+
+        .germany {
             grid-column: 1/2;
             grid-row: 3/4;
             width: 100%;
             height: 100%;
-            background-color: gray;
+            position: relative;
         }
-
-        .container .info:nth-child(4){
-            grid-column: 2/5;
-            grid-row: 2/4;
-            z-index: 4;
-        }
-
-        .container .background-img{
+        
+        .usa {
             width: 100%;
             height: 100%;
-        }
-
-        .container .profile{
-            justify-content: center;
-            align-items: center;
             grid-column: 1/2;
-            grid-row: 1/2;
-            border-radius: 100%;
-            border: 1px inset black;
-            z-index: 3;
+            grid-row: 4/5;  
         }
 
-        .info {
-            background-color: gray;
-            display: grid;
-        }
     </style>
 </head>
-<!-- Este es un ejercicio aplicando todo lo visto para relaizar una card propia -->
 <body>
-    <section class="card">
-        <div class="container">
-            <img src="https://wallpapercave.com/wp/wp1914669.jpg" alt="background-img" class="background-img">
-            <img src="https://wiki.warthunder.com/images/3/36/Cardicon_dogfighting_pilot.png" alt="profile" class="profile">
-            <img src="https://media.printables.com/media/prints/852559/images/6557322_27c4a7b3-e480-40d4-9b62-10c9f5570d24_7d21314a-1720-45d8-ba5a-77c27f44d9fe/thumbs/inside/1280x960/png/wt1.webp" alt="logo" class="logo">
-            <div class="info"> 
-            </div> 
+    <section class="container">
+        <div class="card">
+            <div class="overlay"> </div>
+            <div class="background-img">
+                <img src="https://wallpapercave.com/wp/wp1914669.jpg" alt="background-img" class="background"> 
+            </div>
+            <div class="profile-img">
+                <img src="https://wiki.warthunder.com/images/3/36/Cardicon_dogfighting_pilot.png" alt="profile" class="profile">
+            </div>
+            <div class="logo-img">
+                <img src="https://media.printables.com/media/prints/852559/images/6557322_27c4a7b3-e480-40d4-9b62-10c9f5570d24_7d21314a-1720-45d8-ba5a-77c27f44d9fe/thumbs/inside/1280x960/png/wt1.webp" alt="logo" class="logo">
+            </div>
+            <div class="name">
+                <p class="Item">the M3sias</p>
+                <p class="Item">Nivel 99</p>
+            </div>
+            <div class="ground">Terrestres</div>
+            <div class="air">VEHICULOS
+                <div class="SI">Aereas</div>
+            </div>
+            <div class="coast">Flota</div>
+            <div class="infoG">BR: 6.7</div>
+            <div class="infoA">BR: 10.7</div>
+            <div class="infoC">BR: Reserva</div>
+            <img src="https://encyclopedia.warthunder.com/i/images/f_111a.png" alt="f111" class="plane">
+            <img src="https://encyclopedia.warthunder.com/i/images/germ_pzkpfw_vi_ausf_b_tiger_iih.png" alt="tiger2" class="tank">
+            <img src="https://encyclopedia.warthunder.com/i/images/us_destroyer_clemson_litchfield.png" alt="litchfield" class="fleet"> 
+            <div class="infoC">BR: Reserva</div>
+            <div class="tittle">
+                <p>MAIN</p>
+            </div>
+            <img src="https://flagsofallnations.com.au/cdn/shop/products/1280px-Flag_of_Germany_svg-500x500.png?v=1558054628" alt="gr" class="germany">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/640px-Flag_of_the_United_States.svg.png" alt="usa" class="usa">
         </div>
     </section>
+    
 </body>
 </html>
