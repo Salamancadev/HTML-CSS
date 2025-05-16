@@ -1,0 +1,93 @@
+/* CSS de la clase
+
+* .container {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 75px 75px 75px;
+    grid-template-areas: 
+     "header header header"
+     "side main main"
+     "side main main";
+    place-content: center;
+} 
+
+
+.item {
+    font-size: 4rem;
+}
+
+.item-1 {
+    border: 5px solid #263ec5;
+    background-color: #a4a3f5;
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+/* }
+
+.item-2 {
+    border: 5px solid #0c4205;
+    background-color: #9ed1a7;
+    grid-area: side;
+    grid-row: 2/4;
+}
+
+.item-3 {
+    border: 5px solid #aa4205;
+    background-color: #ebb095;
+    grid-area: main;
+    /* grid-area: 2/ 2 / 4 / 4; */
+/* }  */
+
+/* RETO CSS */
+.container {
+    background-color: aqua;
+    border: 5px solid darkblue;
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3,150px);
+    place-content: center;
+}
+
+.item-1 {
+    border: 5px solid #0c4205;
+    background-color: #9ed1a7;
+    grid-area: 1/ 1 / 2 / 2;
+}
+
+.item-2 {
+    border: 5px solid #051a42;
+    background-color: #9eb8d1;
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.item-3 {
+    border: 5px solid #420508;
+    background-color: #d19eb2;
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.item-4 {
+    border: 5px solid #420c05;
+    background-color: #d1ae9e;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.item-5 {
+    border: 5px solid #3d0542;
+    background-color: #d19eca;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.item-6 {
+    border: 5px solid #054219;
+    background-color: #9ed1af;
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.item-7 {
+    border: 5px solid #051a42;
+    background-color: #9eb8d1;
+    grid-area: 3 / 3 / 4 / 4;
+}
