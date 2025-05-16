@@ -1,0 +1,31 @@
+/* CSS de la clase */
+
+/* * .container {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 150px 150px 150px;
+    grid-auto-rows: 150px;
+    height: 600px;
+} */ 
+
+/* CSS del reto */
+.container {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-auto-rows: 150px;
+    grid-auto-flow: row;
+    place-content: center;
+    gap: 50px;
+   }
+
+.item {
+    border: 5px solid #00bcd4;
+    font-size: 4rem;
+    align-self: end;
+    justify-self: end;
+
+}
