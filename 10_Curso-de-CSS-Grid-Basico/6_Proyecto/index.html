@@ -9,6 +9,18 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="./assets/icons/logo.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section class="hero">
             <div class="info">
@@ -17,7 +29,7 @@
                     perspiciatis. Cumque
                     adipisci obcaecati quas iusto possimus laboriosam nihil, minima molestias, illum voluptas saepe
                     deserunt minus animi ex molestiae quae.</p>
-                <button class="info-button">Book a table</button>
+                <button class="info-button">Comprar</button>
             </div>
             <img class="hero-image" src="./assets/img/Erdinger-Pikantus.webp" alt="Erdinger_Pikantus">
         </section>
@@ -30,8 +42,75 @@
                 <img class="beer-item" src="./assets/img/Erdinger-Kristall.jpg" alt="Erdinger-Kristall">
                 <img class="beer-item" src="./assets/img/Erdinger-Weissbier.jpg" alt="Erdinger-Weissbier">
             </div>
+        </section>
+
+        <section class="cardsviews">
+            <h2 class="card-main-title">Otros productos</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="./assets/img/Erdinger-Urweisse.png" alt="Imagen de ejemplo" class="card-img">
+                    <div class="card-content">
+                        <h2 class="card-title">Erdinger Urweisse</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magni,
+                            blanditiis
+                            nesciunt commodi minus, deleniti, maiores saepe dolor nemo praesentium provident consequatur
+                            asperiores quibusdam. Adipisci amet iusto quod esse numquam?</p>
+                        <a href="#" class="card-button">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/img/Erdinger-Weisbier.png" alt="Imagen de ejemplo" class="card-img">
+                    <div class="card-content">
+                        <h2 class="card-title">Erdinger Weissbier</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magni,
+                            blanditiis
+                            nesciunt commodi minus, deleniti, maiores saepe dolor nemo praesentium provident consequatur
+                            asperiores quibusdam. Adipisci amet iusto quod esse numquam?</p>
+                        <a href="#" class="card-button">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/img/Erdinger-Dunkel.png" alt="Imagen de ejemplo" class="card-img">
+                    <div class="card-content">
+                        <h2 class="card-title">Erdinger Dunkel</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magni,
+                            blanditiis
+                            nesciunt commodi minus, deleniti, maiores saepe dolor nemo praesentium provident consequatur
+                            asperiores quibusdam. Adipisci amet iusto quod esse numquam?</p>
+                        <a href="#" class="card-button">Leer más</a>
+                    </div>
+                </div>
+            </div>
 
         </section>
+
+        <section class="form">
+            <h2>Contáctenos</h2>
+            <div class="formulario">
+                <form action="/my-handling-form-page" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name" />
+
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="user_mail" />
+
+                <label for="msg">Mensaje:</label>
+                <textarea id="msg" name="user_message"></textarea>
+
+                <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul class="footer-list">
+            <li>Contacto: +57 3184235566</li>
+            <li>Dirección: Malambo Cr30</li>
+            <li>Copyright 2025®</li>
+        </ul>
+    </footer>
 </body>
 
 </html>

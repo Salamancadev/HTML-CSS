@@ -1,33 +1,77 @@
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+    margin: 0;
 }
 
 main {
     max-width: 1200px;
     margin: 0 auto;
+    background-color: aliceblue;
+    padding: 0 20px;
 }
 
+/* NAVBAR */
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #0c0c30;
+    color: white;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    justify-content: end;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f0a818;
+}
+
+/* HERO / SECCIÓN PRINCIPAL */
 .hero {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-auto-rows: 600px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
     border-bottom: 1px solid #ddd;
-
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    grid-column: 2/3;
+    height: auto;
+    object-fit: cover;
 }
 
 .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: justify;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .info-subtitle {
@@ -50,36 +94,158 @@ main {
     background-color: #fb8c00;
     font-weight: 900;
     padding: 12px 24px;
+    cursor: pointer;
 }
 
+/* SECCIÓN FOTOS */
 .photos {
-     margin: 100px 0 ;
+    margin: 100px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
 }
 
 .photos-title {
-    color: #333;
-    font-weight: bold;
     text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 50px;
 }
 
 .photos-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(150px, 200px));
-    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 25px;
-    justify-content: center;
-    
 }
 
 .beer-item {
     width: 100%;
     height: 100%;
     object-fit: cover;
-     border-radius: 25px;
-    
+    border-radius: 25px;
 }
 
-.beer-group {
-    grid-area: 1/ 1 / 3 / 3;
+/* SECCIÓN CARDS */
+.card-main-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    text-decoration: none;
+    color: white;
+    background-color: #003366;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #005599;
+}
+
+/* SECCIÓN FORMULARIO */
+.form {
+    display: grid;
+    place-items: center;
+    padding: 60px 20px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: cursive;
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.formulario button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+}
+
+.footer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+    font-size: 18px;
+    text-align: center;
 }
